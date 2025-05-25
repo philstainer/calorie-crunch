@@ -34,12 +34,26 @@ import { ThemeToggle } from "#/components/theme-toggle";
 		<title>Astro</title>
 	</head>
 	<body>
-		<ThemeToggle client:load />
+		<div class="min-h-screen py-8 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
 
-		<h1 class="text-4xl">Astro</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Learn How Many Calories You Burn Every Day
+          </h1>
+          <p class="text-lg max-w-3xl mx-auto">
+						Discover your Total Daily Energy Expenditure (TDEE) — the number of calories you burn daily — using our TDEE calculator.
+						This tool also provides key insights like your <span class="font-semibold underline decoration-dotted">BMI</span>, <span class="font-semibold underline decoration-dotted">BMR</span>, <span class="font-semibold underline decoration-dotted">Macros</span>, and other essential health metrics!
+          </p>
 
-		<div class="grid place-items-center h-screen content-center">
-			<Button variant="outline">Button</Button>
-		</div>
+					<div class="flex justify-center mt-8">
+
+						<ThemeToggle client:load />
+					</div>
+
+        </div>
+        <!-- <CalorieCalculator /> -->
+      </div>
+    </div>
 	</body>
 </html>
