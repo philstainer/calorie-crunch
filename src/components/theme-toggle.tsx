@@ -1,4 +1,5 @@
 import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { Button } from "#/components/ui/button";
 import {
@@ -7,8 +8,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "#/components/ui/dropdown-menu";
-import { useEffect } from "react";
-import { useState } from "react";
 
 export function ThemeToggle() {
   const [theme, setThemeState] = useState<"light" | "dark" | "system">(
