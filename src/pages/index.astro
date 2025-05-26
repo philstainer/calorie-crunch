@@ -2,8 +2,9 @@
 import '@fontsource-variable/oswald';
 import "#/styles/global.css";
 
-import { Button } from "#/components/ui/button";
 import { ThemeToggle } from "#/components/theme-toggle";
+import { FormAndResults } from "#/components/form-and-results";
+import { Calculator } from 'lucide-react';
 ---
 
 <script is:inline>
@@ -34,26 +35,24 @@ import { ThemeToggle } from "#/components/theme-toggle";
 		<title>Astro</title>
 	</head>
 	<body>
-		<div class="min-h-screen py-8 px-4">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-8">
 
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Learn How Many Calories You Burn Every Day
+		<div class="max-w-4xl mx-auto p-6 space-y-6">
+      <div class="flex flex-col md:flex-row items-center justify-between mb-6 justify-items-center">
+        <div class="text-center flex-13">
+          <h1 class="text-3xl font-bold flex items-center justify-center gap-2">
+            <Calculator className="size-8" />
+            Calorie Calculator
           </h1>
-          <p class="text-lg max-w-3xl mx-auto">
-						Discover your Total Daily Energy Expenditure (TDEE) — the number of calories you burn daily — using our TDEE calculator.
-						This tool also provides key insights like your <span class="font-semibold underline decoration-dotted">BMI</span>, <span class="font-semibold underline decoration-dotted">BMR</span>, <span class="font-semibold underline decoration-dotted">Macros</span>, and other essential health metrics!
+          <p class="text-muted-foreground mt-2">
+            Calculate your daily caloric needs based on your personal information and fitness goals
           </p>
-
-					<div class="flex justify-center mt-8">
-
-						<ThemeToggle client:load />
-					</div>
-
         </div>
-        <!-- <CalorieCalculator /> -->
+        <div class="mt-4 md:mt-0">
+          <ThemeToggle client:load />
+        </div>
       </div>
-    </div>
+
+			<FormAndResults client:load />
+
 	</body>
 </html>
