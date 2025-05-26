@@ -4,6 +4,7 @@ import { SubmitButton } from "#/components/form/submit-button";
 import { TextField } from "#/components/form/text-field";
 import { RadioGroupField } from "#/components/form/radio-group";
 import { NumberField } from "#/components/form/number-field";
+import { SegmentToggleField } from "#/components/form/segment-toggle-field";
 
 export const { fieldContext, useFieldContext, formContext, useFormContext } =
   createFormHookContexts();
@@ -14,6 +15,7 @@ export const { useAppForm: useCustomForm } = createFormHook({
     NumberField,
     SelectField,
     RadioGroupField,
+    SegmentToggleField,
   },
   formComponents: {
     SubmitButton,

@@ -8,7 +8,7 @@ import { Label } from "#/components/ui/label";
 type InputProps = ComponentProps<typeof Input>;
 
 type NumberFieldProps = {
-  label: string;
+  label?: string;
 } & InputProps;
 
 export const NumberField = ({ label, ...inputProps }: NumberFieldProps) => {
@@ -25,7 +25,7 @@ export const NumberField = ({ label, ...inputProps }: NumberFieldProps) => {
   return (
     <div className={clsx("w-full space-y-1", inputProps.hidden && "hidden")}>
       <div className="space-y-2">
-        <Label htmlFor={field.name}>{label}</Label>
+        {label && <Label htmlFor={field.name}>{label}</Label>}
 
         <Input
           id={field.name}
